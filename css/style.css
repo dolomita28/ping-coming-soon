@@ -1,0 +1,153 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+:root {
+    /* ### Primary */
+    --Blue: hsl(223, 87%, 63%);
+    /* ### Secondary */
+    --Pale-Blue: hsl(223, 100%, 88%);
+    --Light-Red: hsl(354, 100%, 66%);
+    /* ### Neutral */
+    --Gray: hsl(0, 0%, 59%);
+    --Very-Dark-Blue: hsl(209, 33%, 12%);
+
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;  
+  font-family: 'Libre Franklin', sans-serif;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
+    background-color: var(--Pale-Blue);
+    font-size: 2rem;
+}
+
+main{
+    width: 70vw;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;        
+}
+h1{
+    color: var(--Gray);
+    font-weight: 600;
+}
+.bold{
+    color: var(--Very-Dark-Blue);
+    font-weight: 700;
+
+}
+.subscribe{
+    color: var(--Very-Dark-Blue);
+    font-size: 1.7rem;
+    font-weight: 300;
+}
+.form-control{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+
+}
+input::placeholder{
+    padding-left: 2rem;
+
+}
+input{
+    width: 65%;
+    height: 5rem;
+    padding-left: 2rem;
+    border-radius: 3rem;
+    border: 1px solid var(--Pale-Blue);
+}
+input:active{
+    border: 1px solid var(--Gray);
+}
+.btn{
+    border-radius: 3rem;
+    height: 5rem;
+    width: 30%;
+    background-color: var(--Blue);
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: .5px;
+    border: none;
+}
+.btn:hover{
+    cursor: pointer;
+    box-shadow: 0 5px 15px var(--Blue);
+}
+.validator{
+    color: var(--Light-Red);
+    font-size: 1.3rem;
+    font-style: italic;
+    width: 50%;
+    padding-left: 2rem;
+}
+.dashboard{
+    width: 50%;
+    height: auto;
+}
+.social{
+    display: flex;
+    width: 15%;
+    justify-content: space-around;
+}
+.fa{
+    font-size: 1.7rem;
+    width: 3rem;
+    height: 3rem;
+    background-color: #fff;
+    color: var(--Blue);
+    padding:0.7rem;
+    border-radius: 50%;
+}
+.fa:hover{
+    background-color: var(--Blue);
+    color:#fff;
+    cursor: pointer;
+}
+.hidden{
+    display: none;    
+}
+.error{
+    border: 1px solid var(--Light-Red);
+    color: var(--Light-Red);
+}
+.copy{
+    color: var(--Gray);
+    font-size: 1.5rem;
+    font-weight: 300;
+
+}
+
+  /* RESPONSIVE */
+   @media only screen and (max-width:600px) {
+       body{
+           background-color: transparent;
+       } 
+    main, .dashboard, .validator{
+        width: 100%;
+    }
+    h1{
+        font-size: 3rem;
+    }
+    .form-control{
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    .subscribe, .copy{
+        font-size: 1.3rem;
+    }
+  } 
